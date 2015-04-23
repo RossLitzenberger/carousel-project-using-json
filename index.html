@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8" />
 	<title>JavaScript And JSON</title>
+	<link href='http://fonts.googleapis.com/css?family=Wendy+One|Libre+Baskerville' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <div id="speakerbox">
@@ -29,7 +31,8 @@
 		$.getJSON('data.json', function(data){
 			var template = $('#speakerstpl').html();
 			var html = Mustache.to_html(template, data);
-			$('#carousel').html(html)
+			$('#carousel').html(html);
+		
 			$('#carousel').cycle({
 				fx: 'fade',
 				pause: 1,
